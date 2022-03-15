@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Web.Internal;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace System.Web.Adapters
@@ -15,8 +16,13 @@ namespace System.Web.Adapters
         public static void AddSystemWebAdapters(this IServiceCollection services)
         {
             services.AddHttpContextAccessor();
+            services.AddSingleton(typeof(HttpHandlerMiddleware<>));
             services.AddSingleton<PreBufferRequestStreamMiddleware>();
         }
+
+        public static void UseHttpHandler<T>(this IApplicationBuilder app)
+            where T : IHttpHandler
+            => app.UseMiddleware<HttpHandlerMiddleware<T>>();
 
         public static void UseSystemWebAdapters(this IApplicationBuilder app)
         {

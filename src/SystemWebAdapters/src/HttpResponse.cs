@@ -20,6 +20,8 @@ namespace System.Web
             _response = response;
         }
 
+        internal bool IsEnded { get; private set; }
+
         public int StatusCode
         {
             get => throw new NotImplementedException();

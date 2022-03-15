@@ -15,5 +15,8 @@
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.HttpResponseWrapper))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.HttpServerUtility))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.HttpServerUtilityBase))]
+[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.HttpTaskAsyncHandler))]
+[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.IHttpAsyncHandler))]
+[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.IHttpHandler))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.SameSiteMode))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(System.Web.Caching.Cache))]
