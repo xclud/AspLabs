@@ -4,6 +4,8 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
+using System.Xml;
+using System.Xml.Linq;
 using Moq;
 using Xunit;
 
@@ -25,16 +27,14 @@ public class PlaywrightFixture
     public PlaywrightFixture()
     {
         Microsoft.Playwright.Program.Main(new[] { "install" });
+    }
 
-        if (Environment.GetEnvironmentVariable("ADAPTER_FRAMEWORK_URL") is { } url)
-        {
-            _aspNetFramework = new(url);
-        }
+    private string GetFrameworkUrl()
+    {
+        XNamespace NS = "http://schemas.microsoft.com/developer/msbuild/2003";
+        var doc = XDocument.Load("settings/framework.xml");
 
-        if (Environment.GetEnvironmentVariable("ADAPTER_FRAMEWORK_URL") is { } url)
-        {
-            _aspNetFramework = new(url);
-        }
+        var node = doc.Descendants(NS + "DevelopmentServerPort");
     }
 
     public Uri AspNetFramework { get; }

@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcCoreApp", "samples\MvcCo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7D972DB3-8D6E-4963-A97E-FC87C5AE4B7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Adapters.Tests.Playwright", "System.Web.Adapters.Tests.Playwright\System.Web.Adapters.Tests.Playwright.csproj", "{25498498-4FF8-4B27-A0A7-959A93E6720A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Web.Adapters.Playwright.Tests", "System.Web.Adapters.Tests.Playwright\System.Web.Adapters.Playwright.Tests.csproj", "{25498498-4FF8-4B27-A0A7-959A93E6720A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04019E83-295A-431C-9018-9B886BA6DD48}"
 EndProject
